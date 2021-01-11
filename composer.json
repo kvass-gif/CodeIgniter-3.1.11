@@ -1,0 +1,7 @@
+{
+    "name": "user/code",
+    "description": "myProject",
+    "require": {
+        "fzaninotto/faker": "^1.5"
+    }
+}

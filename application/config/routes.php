@@ -52,7 +52,15 @@ defined('BASEPATH') or exit('No direct script access allowed');
 // $route['default_controller'] = 'welcome';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
+$route['generateFakeDataToDatabase/categories(:num)/
+categories(:num)/
+authors(:num)/
+posts(:num)/
+post_likes(:num)/
+comments(:num)'] = 
+'generateFakeDataToDatabase/$1/$1/$1/$1/$1/$1';
 
 
-$route['main'] = 'main/index';
-$route['main/(:any)'] = 'Main/view/$1';
+
+// $route['main'] = 'main/index';
+// $route['main/(:any)'] = 'Main/view/$1';

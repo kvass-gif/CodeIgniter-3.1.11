@@ -1,4 +1,10 @@
 <?php
+// # When installed via composer
+require_once 'vendor/autoload.php';
+// # Load Fakers own autoloader
+require_once 'vendor/fzaninotto/faker/src/autoload.php';
+
+
 
 /**
  * CodeIgniter
