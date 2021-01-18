@@ -49,7 +49,7 @@
 				arr[4] = document.getElementById('post_likes').value;
 				arr[5] = document.getElementById('post_photos').value;
 
-				document.location.href = `http://localhost/php/CodeIgniter/CodeIgniter-3.1.11/index.php/FakerController/generateFakeDataToDatabase/${arr.join('/')}`;
+				document.location.href = `http://localhost/php/CodeIgniter/CodeIgniter-3.1.11/FakerController/generateFakeDataToDatabase/${arr.join('/')}`;
 
 			}
 		

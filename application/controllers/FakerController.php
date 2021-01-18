@@ -41,8 +41,9 @@ class FakerController extends CI_Controller{
 				$posts[] = [
 					'author_id'=>$authorId,
 					'category_id'=>$categoryId,
-					'title' => $this->faker->sentences(rand(1,5), true),
-					'content' => $this->faker->paragraphs(rand(5,10), true),
+					'title' => $this->faker->sentences(1, true),
+					'description' => $this->faker->sentences(rand(3,5), true),
+					'content' => $this->faker->paragraphs(rand(10,15), true),
 					'status' => $status[rand(0,count($status) - 1)],
 					'date' => $this->faker->dateTimeBetween('-10 years','now', 'UTC')->format('Y-m-d H:i:sP')   
 				];
@@ -88,13 +89,12 @@ class FakerController extends CI_Controller{
 		
 		$this->FakerModel->setDataToTable($comments, false,'comments');
 	}
-
-	public function generateFakeDataToDatabase($qtyCategories, $qtyAuthors, $qtyPosts, $qtyPostLikes, $qtyComments, $qtyPostPhotos){
-		
+	
+	public function generateFakeDataToDatabase($qtyAuthors, $qtyCategories, $qtyComments, $qtyPosts, $qtyPostLikes, $qtyPostPhotos){
 		
 		$this->faker = Faker\Factory::create('uk_UA');
 		$this->load->model('FakerModel');
-
+		
 		$this->generateFakeCategories($qtyCategories);
 		$this->generateFakeAuthors($qtyAuthors);
 
@@ -117,9 +117,6 @@ class FakerController extends CI_Controller{
 		$this->load->view('FakeMain');
 	}
 
-	
-
-	
 
 }
 ?> 
